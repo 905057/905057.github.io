@@ -6,48 +6,55 @@ https://pages.github.com/
 https://www.w3schools.com/html/
 -->
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Tracker</h1>
+        <p>Track your monthly expenses and see where your money is going!</p>
 
-<html>
-    <head>
-        <title> 
-            Budget tracker
-        </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>
-            Budget tracker
-        </h1>
-        <p>
-            Help track monthly expenses and know where your money is going!
-        </p>
-        <form>
-            <input type="radio" id="type" name="Type" value="Income">
-            <label for="Income">Income</label><br>
+        <form class="budget-form">
+            <div class="form-group">
+                <input type="radio" id="income" name="type" value="Income">
+                <label for="income">Income</label>
+                <input type="radio" id="expense" name="type" value="Expense">
+                <label for="expense">Expense</label>
+            </div>
 
-            <input type="radio" id="type" name="Type" value="Expense">
-            <label for="Expense">Expense</label><br>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount">
+            </div>
 
-            <label for="sum">Ammount:</label><br>
-            <input type="number" id="ammount" name="fname"><br>
+            <div class="form-group">
+                <label for="item">Item:</label>
+                <input type="text" id="item" name="item" placeholder="Enter item description">
+            </div>
 
-            <label for="item">Item:</label><br>
-            <input type="text" id="item" name="fname"><br>
+            <input type="submit" value="Add" class="submit-btn">
+        </form>
 
-            <input type="submit" value="Add">
-          </form>
-          <table>
-            <tr>
-              <th>Item</th>
-              <th>Income</th>
-              <th>Expense</th>
-            </tr>
-          </table>
-          <label>
-            Total spending: _
-          </label>
-          <script>
-            src="script.js"
-          </script>
-    </body>
+        <table class="budget-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Income</th>
+                    <th>Expense</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add table rows dynamically -->
+            </tbody>
+        </table>
+
+        <label class="total-label">Total spending: _</label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
