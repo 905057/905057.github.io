@@ -1,0 +1,53 @@
+<!--
+Bryleigh Koci
+CSCI 330
+websties used:
+https://pages.github.com/
+https://www.w3schools.com/html/
+-->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> 
+            Budget tracker
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>
+            Budget tracker
+        </h1>
+        <p>
+            Help track monthly expenses and know where your money is going!
+        </p>
+        <form>
+            <input type="radio" id="type" name="Type" value="Income">
+            <label for="Income">Income</label><br>
+
+            <input type="radio" id="type" name="Type" value="Expense">
+            <label for="Expense">Expense</label><br>
+
+            <label for="sum">Ammount:</label><br>
+            <input type="number" id="ammount" name="fname"><br>
+
+            <label for="item">Item:</label><br>
+            <input type="text" id="item" name="fname"><br>
+
+            <input type="submit" value="Add">
+          </form>
+          <table>
+            <tr>
+              <th>Item</th>
+              <th>Income</th>
+              <th>Expense</th>
+            </tr>
+          </table>
+          <label>
+            Total spending: _
+          </label>
+          <script>
+            src="script.js"
+          </script>
+    </body>
+</html>
